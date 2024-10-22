@@ -1,6 +1,13 @@
+import { ToastContainer } from "react-toastify";
 import "./App.scss";
+import GlobalRouter from "./routes";
 
 function App() {
-  return <>This is it...</>;
+  return (
+    <>
+      <GlobalRouter />
+      <ToastContainer />
+    </>
+  );
 }
 export default App;
