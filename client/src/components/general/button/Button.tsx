@@ -1,3 +1,4 @@
+import "./Button.scss";
 interface IProps {
   variant: "primary" | "secondary" | "danger" | "light";
   type: "submit" | "button";

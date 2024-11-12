@@ -100,7 +100,7 @@ const AuthContextProvider = ({ children }: IProps) => {
       .catch((err) => console.log(err));
   }, []);
 
-  const register = useCallback(
+  const userRegister = useCallback(
     async (
       firstName: string,
       LastName: string,
@@ -149,7 +149,7 @@ const AuthContextProvider = ({ children }: IProps) => {
     isAuthenticated: state.isAuthenticated,
     isAuthLoading: state.isAuthLoading,
     user: state.user,
-    register,
+    userRegister,
     login,
     logout,
   };

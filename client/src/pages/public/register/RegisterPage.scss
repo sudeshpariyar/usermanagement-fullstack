@@ -1,0 +1,21 @@
+.registerPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__link {
+    display: flex;
+    gap: 0.5rem;
+    margin-block: 0.5rem;
+  }
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+  }
+}

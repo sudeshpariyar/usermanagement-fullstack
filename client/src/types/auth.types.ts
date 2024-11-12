@@ -54,7 +54,7 @@ export interface IAuthContext {
   isAuthLoading: boolean;
   user?: IAuthUser;
   login: (userName: string, password: string) => Promise<void>;
-  register: (
+  userRegister: (
     firstName: string,
     lastName: string,
     username: string,

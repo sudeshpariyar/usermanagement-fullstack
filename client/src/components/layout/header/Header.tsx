@@ -3,6 +3,8 @@ import useAuth from "../../../hooks/useAuth.hook";
 import "./Header.scss";
 import Button from "../../general/button/Button";
 import { PATH_DASHBOARD, PATH_PUBLIC } from "../../../routes/path";
+import { IoHomeSharp } from "react-icons/io5";
+import { FaLock } from "react-icons/fa";
 
 const Header = () => {
   const { isAuthLoading, isAuthenticated, user, logout } = useAuth();
@@ -19,12 +21,14 @@ const Header = () => {
       });
       return result;
     }
-    return "--";
+    return "...";
   };
   return (
     <div className="header">
       <div className="header__left">
-        <span onClick={() => navigate("/")}>Logo</span>
+        <span onClick={() => navigate("/")}>
+          <IoHomeSharp color="rgb(223,80,99)" size={24} />
+        </span>
         <div className="header__title">
           <h1>AuthLoading:{isAuthLoading ? "True" : "..."}</h1>
           <h1 className="header__auth">
@@ -32,7 +36,7 @@ const Header = () => {
             {isAuthenticated ? (
               <span>Authenticated</span>
             ) : (
-              <span>Not Authinticatae</span>
+              <FaLock color="gray" />
             )}
           </h1>
           <h1 className="header__userName">
